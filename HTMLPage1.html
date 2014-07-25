@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="chirpper/content/bootstrap.css" rel="stylesheet" />
+    <link href="chirpper/content/_mystyle.css" rel="stylesheet" />
+</head>
+<body>
+    <input id="user-id" class="center-block form-control" type="text" value="Vejabi" /><br />
+
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <div class="row clearfix">
+                    <div class="col-md-2 column">
+                        <a id="modal-777719" href="#modal-container-777719" role="button" class="btn btn-success btn-lg btn-block" data-toggle="modal">Message</a>
+                    </div>
+                    <div class="col-md-8 column">
+                        <input type="text" class="form-control" id="To" placeholder="To" /><br /><br /><br /><br />
+                        <div class="jumbotron">
+                            <h1>
+                                Chirps!!!
+                            </h1>
+                            <table class="table table-hover" id="tableOutput"></table>
+                            <p>
+                                <a class="btn btn-primary btn-large" href="#">Refresh</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 column">
+                        <a id="modal-167958" href="#modal-container-167958" role="button" class="btn btn-info btn-lg btn-block" data-toggle="modal">Chirp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="modal-container-777719" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header footer19">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button><center>
+                        <h4 class="modal-title" id="myModalLabel">
+                            Send Friend A Message!!!!
+                        </h4>
+                    </center>
+                </div>
+                <div class="modal-body">
+
+                    <center>
+                        <div class="form-group has-success">
+                            <label class="control-label" for="message-text"></label>
+                            <input type="text" id="message-text" class="form-control" placeholder="What are you thinking.......">
+                        </div>
+                    </center>
+                    <button type="button" onclick="onSendMessage('user-id','message-text','To')" class="btn btn-success btn-lg btn-block">Message</button>
+
+                </div>
+                <div class="modal-footer footer19">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="modal fade" id="modal-container-167958" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header footer58">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button><center>
+                        <h4 class="modal-title" id="myModalLabel">
+                            Send A Friendly Chirp!!!!
+                        </h4>
+                    </center>
+                </div>
+                <div class="modal-body">
+                    <center>
+                        <div class="form-group has-info">
+                            <label class="control-label" for="chirp-this"></label>
+                            <input type="text" id="chirp-this" class="form-control" placeholder="What are you thinking.......">
+                        </div>
+                    </center>
+                    <button type="button" onclick="onSendChirp('user-id', 'chirp-this', 'To')" class="btn btn-info btn-lg btn-block">Chirp</button>
+                </div>
+                <div class="modal-footer footer58">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="chirpper/scripts/jquery-1.9.0.js"></script>
+    <script src="chirpper/scripts/bootstrap.js"></script>
+    <script src="chirpper/scripts/_myjs.js"></script>
+</body>
+</html>
